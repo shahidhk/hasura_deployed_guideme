@@ -1,7 +1,8 @@
-from src import app
-from flask import jsonify, request
-import requests
-import json
+#!flask/bin/python
+from flask import Flask, jsonify, request
+from face_detect import FaceDetect
+
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -19,3 +20,6 @@ def index1():
     p = FaceDetect(imgURL)
     a = p.detect()
     return jsonify({'id': a}), 201
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,5 +1,4 @@
-#!flask/bin/python
-from flask import Flask, jsonify, request
+from flask import jsonify, request
 from face_detect import FaceDetect
 
 app = Flask(__name__)

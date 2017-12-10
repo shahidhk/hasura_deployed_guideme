@@ -40,7 +40,7 @@ items:
     namespace: '{{ cluster.metadata.namespaces.user }}'
   spec:
     ports:
-    - port: 3000
+    - port: 80
       protocol: TCP
       targetPort: 5000
     selector:

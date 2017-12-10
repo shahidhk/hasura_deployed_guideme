@@ -162,26 +162,23 @@ notify:
 
 # To see actual endpoints for these routes, use `$ hasura cluster status`
 
-api:
+api-php:
   /:
     corsPolicy: allow_all
     upstreamService:
       name: api
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
-    upstreamServicePort: 80
+    upstreamServicePort: 8000
 
-
-
-mymicroservice:
+api-python:
   /:
     corsPolicy: allow_all
     upstreamService:
-      name: mymicroservice
+      name: api
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
-    upstreamServicePort: 80
-
+    upstreamServicePort: 8080
 
 
 mysql:

@@ -7,23 +7,12 @@ remotes:
     <<: {}
     
     '{{ cluster.metadata.namespaces.user }}.api':
-      api:
-        dockerfile: microservices/api/Dockerfile
-        path: microservices/api
-    # Add new remotes here above this line
-    # Example:
-    
-    # remote-name:
-    #   namespace.service-name:
-    #     container-name:
-    #       path: services/app
-    #       dockerfile: services/app/Dockerfile
-
-    '{{ cluster.metadata.namespaces.user }}.mymicroservice':
-      mymicroservice:
-        dockerfile: microservices/mymicroservice/Dockerfile
-        path: microservices/mymicroservice
-
+      php:
+        dockerfile: microservices/api/php/Dockerfile
+        path: microservices/api/php
+      python:
+        dockerfile: microservices/api/python/Dockerfile
+        path: microservices/api/python
 
     '{{ cluster.metadata.namespaces.user }}.mysql':
       mysql:

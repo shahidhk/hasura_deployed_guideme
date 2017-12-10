@@ -183,3 +183,14 @@ mymicroservice:
     upstreamServicePort: 80
 
 
+
+mysql:
+  /:
+    corsPolicy: allow_all
+    upstreamService:
+      name: mysql
+      namespace: '{{ cluster.metadata.namespaces.user }}'
+    upstreamServicePath: /
+    upstreamServicePort: 80
+
+

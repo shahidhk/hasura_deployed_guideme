@@ -18,3 +18,15 @@ remotes:
     #     container-name:
     #       path: services/app
     #       dockerfile: services/app/Dockerfile
+
+    '{{ cluster.metadata.namespaces.user }}.mymicroservice':
+      mymicroservice:
+        dockerfile: microservices/mymicroservice/Dockerfile
+        path: microservices/mymicroservice
+
+
+    '{{ cluster.metadata.namespaces.user }}.mysql':
+      mysql:
+        dockerfile: microservices/mysql/Dockerfile
+        path: microservices/mysql
+

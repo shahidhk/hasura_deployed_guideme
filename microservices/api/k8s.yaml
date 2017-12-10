@@ -21,6 +21,8 @@ items:
         containers:
         - image: hasura/base-git-image:0.7
           imagePullPolicy: IfNotPresent
+          - name: PRODUCTION
+            value: "true"
           name: python 
           ports:
           - containerPort: 8080
@@ -51,9 +53,11 @@ items:
   spec:
     ports:
     - port: 8080
+      name: python
       protocol: TCP
       targetPort: 8080
     - port: 8000
+      name: php
       protocol: TCP
       targetPort: 8000
     selector:

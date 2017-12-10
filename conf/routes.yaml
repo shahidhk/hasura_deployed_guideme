@@ -172,3 +172,14 @@ api:
     upstreamServicePort: 80
 
 
+
+mymicroservice:
+  /:
+    corsPolicy: allow_all
+    upstreamService:
+      name: mymicroservice
+      namespace: '{{ cluster.metadata.namespaces.user }}'
+    upstreamServicePath: /
+    upstreamServicePort: 80
+
+

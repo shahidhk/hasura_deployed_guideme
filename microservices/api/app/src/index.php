@@ -2,7 +2,7 @@
 
 $servername = "mysql.default";
 $username = "root";
-$password = "";
+$password = "abcd";
 $dbname = "guide";
 
 $link = mysqli_connect($servername, $username, $password, $dbname);

@@ -1,4 +1,5 @@
-FROM php:7.1.2-apache
+FROM php:5.6-apache
+RUN docker-php-ext-install mysqli
 
 # Add default apache listener
 COPY app/conf/apache-config.conf /etc/apache2/sites-enabled/000-default.conf

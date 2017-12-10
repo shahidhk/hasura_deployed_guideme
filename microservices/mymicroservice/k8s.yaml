@@ -42,7 +42,7 @@ items:
     ports:
     - port: 80
       protocol: TCP
-      targetPort: 5000
+      targetPort: 8080
     selector:
       app: mymicroservice
     type: ClusterIP
